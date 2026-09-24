@@ -1,0 +1,155 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ibnp-base}[2026/09/24 v1.0.0 Estilo Institucional IBNP Guapo]
+
+% ---------------------------------------------------------
+% 1. Codificação e Idioma
+% ---------------------------------------------------------
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[brazilian]{babel}
+
+% ---------------------------------------------------------
+% 2. Geometria da Página (Padrão ABNT em Folha A4)
+% ---------------------------------------------------------
+\RequirePackage{geometry}
+\geometry{
+    a4paper,
+    top=3.0cm,
+    left=3.0cm,
+    right=2.0cm,
+    bottom=2.0cm,
+    headheight=25pt,
+    headsep=1.0cm,
+    footskip=1.2cm
+}
+
+% ---------------------------------------------------------
+% 3. Tipografia e Espaçamento
+% ---------------------------------------------------------
+\RequirePackage{lmodern}
+\RequirePackage[scaled=0.92]{helvet}
+\RequirePackage{setspace}
+\onehalfspacing % Espaçamento 1.5 padrão ABNT
+
+% ---------------------------------------------------------
+% 4. Paleta de Cores Institucional IBNP
+% ---------------------------------------------------------
+\RequirePackage[dvipsnames, table]{xcolor}
+
+\definecolor{ibnpNavy}{HTML}{0B2545}     % Primária institucional
+\definecolor{ibnpBlue}{HTML}{133E87}     % Secundária / Subtítulos
+\definecolor{ibnpSky}{HTML}{1D76DB}      % Destaque e links
+\definecolor{ibnpDark}{HTML}{2D3748}     % Texto padrão
+\definecolor{ibnpLight}{HTML}{F7FAFC}    % Fundos de caixas
+\definecolor{ibnpBorder}{HTML}{E2E8F0}   % Bordas sutis
+
+% ---------------------------------------------------------
+% 5. Metadados e Variáveis do Documento
+% ---------------------------------------------------------
+\newcommand{\ibnpsubjectVal}{Projetos de Impacto Social}
+\newcommand{\ibnplocationVal}{Guapó - GO}
+\newcommand{\ibnptitleVal}{Projeto Institucional}
+\newcommand{\ibnpdateVal}{\today}
+
+\newcommand{\ibnpsubject}[1]{\renewcommand{\ibnpsubjectVal}{#1}}
+\newcommand{\ibnplocation}[1]{\renewcommand{\ibnplocationVal}{#1}}
+\newcommand{\ibnptitle}[1]{\renewcommand{\ibnptitleVal}{#1}}
+\newcommand{\ibnpdate}[1]{\renewcommand{\ibnpdateVal}{#1}}
+
+% ---------------------------------------------------------
+% 6. Cabeçalho e Rodapé Institucionais (fancyhdr)
+% ---------------------------------------------------------
+\RequirePackage{fancyhdr}
+\RequirePackage{lastpage}
+
+\pagestyle{fancy}
+\fancyhf{} % Limpa cabeçalho e rodapé atuais
+
+% Regras com cores sutis
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+\renewcommand{\headrule}{%
+    \hbox to\headwidth{%
+        \color{ibnpBorder}\leaders\hrule height \headrulewidth\hfill%
+    }%
+}
+\renewcommand{\footrule}{%
+    \hbox to\headwidth{%
+        \color{ibnpBorder}\leaders\hrule height \footrulewidth\hfill%
+    }%
+}
+
+% Conteúdo do cabeçalho
+\fancyhead[L]{\small \textcolor{ibnpNavy}{\textbf{IBNP}} \textbar{} \textit{\ibnpsubjectVal}}
+\fancyhead[R]{\small \textcolor{ibnpDark}{\ibnplocationVal}}
+
+% Conteúdo do rodapé
+\fancyfoot[L]{\scriptsize \textcolor{gray}{Igreja Batista Nova Primavera \textbullet{} Projetos de Impacto Social}}
+\fancyfoot[R]{\small \textcolor{ibnpNavy}{\textbf{\thepage}} \textcolor{gray}{/} \pageref{LastPage}}
+
+% Redefine estilo plain para páginas de início
+\fancypagestyle{plain}{%
+    \fancyhf{}
+    \fancyfoot[L]{\scriptsize \textcolor{gray}{Igreja Batista Nova Primavera \textbullet{} Projetos de Impacto Social}}
+    \fancyfoot[R]{\small \textcolor{ibnpNavy}{\textbf{\thepage}} \textcolor{gray}{/} \pageref{LastPage}}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0.5pt}
+}
+
+% ---------------------------------------------------------
+% 7. Estilo dos Títulos de Seções (titlesec)
+% ---------------------------------------------------------
+\RequirePackage{titlesec}
+
+\titleformat{\section}
+    {\color{ibnpNavy}\sffamily\Large\bfseries}
+    {\thesection}{1em}{}
+
+\titleformat{\subsection}
+    {\color{ibnpBlue}\sffamily\large\bfseries}
+    {\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+    {\color{ibnpNavy}\sffamily\normalsize\bfseries}
+    {\thesubsubsection}{1em}{}
+
+% ---------------------------------------------------------
+% 8. Ambientes Visuais e Caixas de Destaque (tcolorbox)
+% ---------------------------------------------------------
+\RequirePackage{tcolorbox}
+
+\newtcolorbox{ibnpbox}[2][]{%
+    colback=ibnpLight,
+    colframe=ibnpBlue,
+    coltitle=white,
+    fonttitle=\bfseries\sffamily,
+    title=#2,
+    arc=3mm,
+    boxrule=1pt,
+    left=4mm,
+    right=4mm,
+    top=3mm,
+    bottom=3mm,
+    #1
+}
+
+\newcommand{\ibnpheaderbox}[2]{%
+    \begin{ibnpbox}{#1}
+        #2
+    \end{ibnpbox}
+}
+
+% ---------------------------------------------------------
+% 9. Hiperlinks e Metadados PDF
+% ---------------------------------------------------------
+\RequirePackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=ibnpBlue,
+    urlcolor=ibnpSky,
+    citecolor=ibnpNavy,
+    filecolor=ibnpNavy,
+    pdfborder={0 0 0}
+}
+
+\endinput

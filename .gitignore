@@ -1,0 +1,44 @@
+# Compilação TeX / LaTeX
+*.aux
+*.pdf
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.lol
+*.synctex.gz
+*.synctex(busy)
+*.pdfsync
+*.nav
+*.snm
+*.vrb
+*.bcf
+*.run.xml
+*.xdv
+*.fmt
+*.fot
+
+# Cache e Diretórios Temporários
+.latex_cache/
+_minted-*/
+auto/
+
+# Python e Testes
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Ambientes e Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
