@@ -46,6 +46,15 @@ O repositório disponibiliza o modelo padrão reutilizável em [`templates/templ
 
 ---
 
+## 📁 Projetos Oficiais
+
+- **[Projeto 01] Oficina de Canto Infantil de Guapó:** [`projetos/01-oficina-canto-infantil/projeto_oficina_canto.tex`](projetos/01-oficina-canto-infantil/projeto_oficina_canto.tex)
+  - *Público:* Crianças de 8 a 12 anos de Guapó - GO (30 vagas gratuitas)
+  - *Carga Horária:* 6 horas (4 encontros presenciais de 1h30 em Dezembro)
+  - *Iniciativa:* Escola Social de Guapó / IBNP Guapó
+
+---
+
 ## 🚀 Como Usar em Novos Documentos
 
 ```latex
