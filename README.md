@@ -2,7 +2,7 @@
 
 [![Build and Validate PDFs](https://github.com/ibnp-guapo/projetos-sociais-latex/actions/workflows/build-pdf.yml/badge.svg)](https://github.com/ibnp-guapo/projetos-sociais-latex/actions/workflows/build-pdf.yml)
 
-Oficialização e documentação dos projetos de impacto social da **Igreja Batista Nova Primavera (IBNP)** no município de Guapó - GO em LaTeX.
+Oficialização e documentação dos projetos de impacto social da **Igreja Batista Nacional da Paz de Guapó (IBNP)** no município de Guapó - GO em LaTeX.
 
 ---
 
@@ -16,18 +16,18 @@ O repositório disponibiliza o pacote [ibnp-base.sty](ibnp-base.sty) para padron
 - **Espaçamento:** Entrelinhas 1.5 (`setspace`).
 - **Cabeçalho & Rodapé (`fancyhdr`):**
   - Cabeçalho: Identificação da IBNP e assunto/projeto.
-  - Rodapé: Dados institucionais ("Guapó - GO") e numeração de página ("Página X de Y" via `lastpage`).
+  - Rodapé: Dados institucionais ("Igreja Batista Nacional da Paz de Guapó") e numeração de página ("Página X de Y" via `lastpage`).
 - **Caixas de Destaque:** Ambiente `ibnpbox` e comando `\ibnpheaderbox{título}{conteúdo}` estilizados para resumos e metas.
 
 ### Paleta de Cores Oficial
-| Identificador | HEX | Aplicação |
+| Identificador | HEX / RGB | Aplicação |
 | :--- | :--- | :--- |
-| `ibnpNavy` | `#0B2545` | Cor primária institucional (títulos de seção, destaques fortes) |
-| `ibnpBlue` | `#133E87` | Cor secundária (subtítulos e bordas de caixas) |
-| `ibnpSky` | `#1D76DB` | Cor de acento (links e elementos ativos) |
+| `ibnpPrimary` (`ibnpNavy`) | `#F43517` (R244 G53 B23) | Terracota oficial (títulos principais, cabeçalhos, destaques fortes) |
+| `ibnpSecondary` (`ibnpBlue`) | `#F36529` (R243 G101 B41) | Laranja / Coral (subtítulos e bordas institucionais) |
+| `ibnpAccent` (`ibnpSky`) | `#EFA162` (R239 G161 B98) | Pêssego / Areia (acentos e elementos visuais) |
+| `ibnpLight` | `#F1D6A9` (R241 G214 B169) | Creme claro (fundos de caixas e cartões) |
 | `ibnpDark` | `#2D3748` | Tipografia padrão do corpo do texto |
-| `ibnpLight` | `#F7FAFC` | Fundo de caixas de informação e cartões |
-| `ibnpBorder` | `#E2E8F0` | Divisórias e linhas de cabeçalho/rodapé |
+| `ibnpBorder` | `#E2E8F0` | Divisórias e linhas sutis de cabeçalho/rodapé |
 
 ---
 

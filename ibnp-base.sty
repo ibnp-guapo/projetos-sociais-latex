@@ -32,16 +32,21 @@
 \onehalfspacing % Espaçamento 1.5 padrão ABNT
 
 % ---------------------------------------------------------
-% 4. Paleta de Cores Institucional IBNP
+% 4. Paleta de Cores Institucional Oficial IBNP
 % ---------------------------------------------------------
 \RequirePackage[dvipsnames, table]{xcolor}
 
-\definecolor{ibnpNavy}{HTML}{0B2545}     % Primária institucional
-\definecolor{ibnpBlue}{HTML}{133E87}     % Secundária / Subtítulos
-\definecolor{ibnpSky}{HTML}{1D76DB}      % Destaque e links
-\definecolor{ibnpDark}{HTML}{2D3748}     % Texto padrão
-\definecolor{ibnpLight}{HTML}{F7FAFC}    % Fundos de caixas
-\definecolor{ibnpBorder}{HTML}{E2E8F0}   % Bordas sutis
+\definecolor{ibnpPrimary}{HTML}{F43517}     % R244 G53 B23 - Terracota / Primária Oficial
+\definecolor{ibnpSecondary}{HTML}{F36529}   % R243 G101 B41 - Laranja / Coral Secundária
+\definecolor{ibnpAccent}{HTML}{EFA162}      % R239 G161 B98 - Pêssego / Acento
+\definecolor{ibnpLight}{HTML}{F1D6A9}       % R241 G214 B169 - Creme Claro / Fundo
+\definecolor{ibnpDark}{HTML}{2D3748}        % Texto padrão
+\definecolor{ibnpBorder}{HTML}{E2E8F0}      % Bordas sutis
+
+% Aliases para compatibilidade
+\colorlet{ibnpNavy}{ibnpPrimary}
+\colorlet{ibnpBlue}{ibnpSecondary}
+\colorlet{ibnpSky}{ibnpAccent}
 
 % ---------------------------------------------------------
 % 5. Metadados e Variáveis do Documento
@@ -80,18 +85,18 @@
 }
 
 % Conteúdo do cabeçalho
-\fancyhead[L]{\small \textcolor{ibnpNavy}{\textbf{IBNP}} \textbar{} \textit{\ibnpsubjectVal}}
+\fancyhead[L]{\small \textcolor{ibnpPrimary}{\textbf{IBNP}} \textbar{} \textit{\ibnpsubjectVal}}
 \fancyhead[R]{\small \textcolor{ibnpDark}{\ibnplocationVal}}
 
 % Conteúdo do rodapé
-\fancyfoot[L]{\scriptsize \textcolor{gray}{Igreja Batista Nova Primavera \textbullet{} Projetos de Impacto Social}}
-\fancyfoot[R]{\small \textcolor{ibnpNavy}{\textbf{\thepage}} \textcolor{gray}{/} \pageref{LastPage}}
+\fancyfoot[L]{\scriptsize \textcolor{gray}{Igreja Batista Nacional da Paz de Guapó \textbullet{} Projetos de Impacto Social}}
+\fancyfoot[R]{\small \textcolor{ibnpPrimary}{\textbf{\thepage}} \textcolor{gray}{/} \pageref{LastPage}}
 
 % Redefine estilo plain para páginas de início
 \fancypagestyle{plain}{%
     \fancyhf{}
-    \fancyfoot[L]{\scriptsize \textcolor{gray}{Igreja Batista Nova Primavera \textbullet{} Projetos de Impacto Social}}
-    \fancyfoot[R]{\small \textcolor{ibnpNavy}{\textbf{\thepage}} \textcolor{gray}{/} \pageref{LastPage}}
+    \fancyfoot[L]{\scriptsize \textcolor{gray}{Igreja Batista Nacional da Paz de Guapó \textbullet{} Projetos de Impacto Social}}
+    \fancyfoot[R]{\small \textcolor{ibnpPrimary}{\textbf{\thepage}} \textcolor{gray}{/} \pageref{LastPage}}
     \renewcommand{\headrulewidth}{0pt}
     \renewcommand{\footrulewidth}{0.5pt}
 }
