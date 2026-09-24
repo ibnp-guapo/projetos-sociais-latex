@@ -31,6 +31,21 @@ O repositório disponibiliza o pacote [ibnp-base.sty](ibnp-base.sty) para padron
 
 ---
 
+## 📋 Modelos Oficiais (Templates)
+
+O repositório disponibiliza o modelo padrão reutilizável em [`templates/template_projeto_social.tex`](templates/template_projeto_social.tex), contendo as 9 seções obrigatórias para formalização e submissão a órgãos públicos e editais:
+1. **Identificação do Proponente** (com dados cadastrais oficiais da IBNP Guapó, CNPJ 02.930.019/0001-62 e sede)
+2. **Apresentação e Diagnóstico Sociocultural do Município**
+3. **Justificativa de Impacto Social**
+4. **Objetivos Geral e Específicos**
+5. **Metodologia de Execução e Público Atendido**
+6. **Cronograma Físico de Atividades**
+7. **Planilha Orçamentária Detalhada**
+8. **Indicadores de Monitoramento e Avaliação**
+9. **Termo de Encerramento e Assinaturas dos Responsáveis**
+
+---
+
 ## 🚀 Como Usar em Novos Documentos
 
 ```latex

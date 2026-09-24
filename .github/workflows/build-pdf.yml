@@ -42,7 +42,7 @@ jobs:
         run: |
           mkdir -p dist
           # Compilação de documentos do repositório em dist/
-          for doc in tests/test_base.tex; do
+          for doc in tests/test_base.tex templates/template_projeto_social.tex; do
             if [ -f "$doc" ]; then
               pdflatex -interaction=nonstopmode -halt-on-error -output-directory=dist "$doc"
               pdflatex -interaction=nonstopmode -halt-on-error -output-directory=dist "$doc"
