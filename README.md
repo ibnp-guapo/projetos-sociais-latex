@@ -1,5 +1,7 @@
 # projetos-sociais-latex
 
+[![Build and Validate PDFs](https://github.com/ibnp-guapo/projetos-sociais-latex/actions/workflows/build-pdf.yml/badge.svg)](https://github.com/ibnp-guapo/projetos-sociais-latex/actions/workflows/build-pdf.yml)
+
 Oficialização e documentação dos projetos de impacto social da **Igreja Batista Nova Primavera (IBNP)** no município de Guapó - GO em LaTeX.
 
 ---
@@ -52,10 +54,12 @@ Texto do projeto oficial...
 
 ---
 
-## 🧪 Testes Automatizados
+## 🧪 Testes Automatizados e CI/CD
 
-O projeto utiliza **Spec-Driven Development (SDD)** com testes automatizados de compilação TeX e validação de regras de versionamento:
+O projeto adota a metodologia **Spec-Driven Development (SDD)** com testes automatizados executados localmente e na esteira de integração contínua do GitHub Actions:
 
 ```bash
-python -m unittest tests/test_latex.py
+python -m unittest discover tests/
 ```
+
+Os PDFs oficiais gerados nas execuções da branch `main` são disponibilizados como artefatos para download na aba **Actions** do GitHub.

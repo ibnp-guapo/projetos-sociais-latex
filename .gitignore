@@ -24,6 +24,7 @@
 *.fot
 
 # Cache e Diretórios Temporários
+dist/
 .latex_cache/
 _minted-*/
 auto/
